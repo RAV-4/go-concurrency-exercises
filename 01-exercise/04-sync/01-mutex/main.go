@@ -12,12 +12,17 @@ func main() {
 
 	var balance int
 	var wg sync.WaitGroup
+	var mu sync.Mutex //Mutex es como un semaforo, que nos permite proteger una ejecucion que usa un recurso compartido
 
 	deposit := func(amount int) {
+		mu.Lock()
 		balance += amount
+		mu.Unlock()
 	}
 
 	withdrawal := func(amount int) {
+		mu.Lock()
+		defer mu.Unlock()
 		balance -= amount
 	}
 
