@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	ch := make(chan int)
+	ch := make(chan int, 6) //Con el atributo de capacidad, hasta que no se llene completamente no permite la lectura
 
 	go func() {
 		defer close(ch)
