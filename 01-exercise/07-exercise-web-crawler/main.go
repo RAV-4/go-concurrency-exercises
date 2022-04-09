@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
+	"html"
 	"net/http"
 	"time"
-
-	"golang.org/x/net/html"
 )
 
 var fetched map[string]bool
