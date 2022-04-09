@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	describe(42)
+	describe(42.2)
 	describe("hello")
 }
 
@@ -14,6 +14,7 @@ func describe(value interface{}) {
 	case string:
 		fmt.Printf("v is a string, whose length is %d\n", len(v))
 	default:
+		ZZ
 		fmt.Println("we dont know what 'v' is!")
 	}
 }

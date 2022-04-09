@@ -6,8 +6,6 @@ import (
 	"log"
 	"net/http"
 	"time"
-
-	_ "github.com/lib/pq"
 )
 
 var db *sql.DB
